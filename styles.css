@@ -164,7 +164,10 @@ svg {
     left: 0;
     z-index: var(--z-fixed);
 }
-
+.nav__menu{
+  padding-left: 70px;
+  padding-top: 70px;
+}
 .nav{
     height: var(--header-height);
     display: flex;
