@@ -14,7 +14,8 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="styles.css">
 
-    <title>Anand John - Portfolio</title>
+    <title>Anand John</title>
+
 </head>
 <body>
     <!--======================================================== HEADER ==================================================================-->
@@ -252,15 +253,15 @@
        <div class="contact__container container grid">
         <form action="" class="contact__form" id="contact-form">
             <div class="contact__group">
-                <input type="text" name="user_name" required placeholder="Enter your Name" class="contact__input">
-                <input type="email" name="user_email" required placeholder="Enter your Email" class="contact__input">
+                <input type="text" id="user_name" required placeholder="Enter your Name" class="contact__input">
+                <input type="email" id="user_email" required placeholder="Enter your Email" class="contact__input">
             </div>
 
-            <textarea name="user_project" required placeholder="Enter your message" class="contact__input"></textarea>
+            <textarea id="user_message" required placeholder="Enter your message" class="contact__input"></textarea>
 
             <p class="contact__message" id="contact-message"></p>
 
-            <button type="submit" class="button contact__button">
+            <button onclick="SendMail()" class="button contact__button">
                 Sent Message
             </button>
         </form>
@@ -309,6 +310,11 @@
 
  <!--=============== EMAIL JS ===============-->
  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+ <script type="text/javascript">
+     (function(){
+         emailjs.init("AQyRX2ilMatnoRPxW")
+     })();
+ </script>
 
  <!--=============== MAIN JS ===============-->
  <script src="main.js" type="text/javascript"></script>
