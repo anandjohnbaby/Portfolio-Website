@@ -165,8 +165,8 @@ svg {
     z-index: var(--z-fixed);
 }
 .nav__menu{
-  padding-left: 70px;
-  padding-top: 70px;
+  padding-left: 50px;
+  padding-top: 4rem;
 }
 .nav{
     height: var(--header-height);
@@ -199,7 +199,7 @@ svg {
     top: 0;
     right: -100%;
     background-color: hsla(0, 0%, 10%, .3);
-    width: 75%;
+    width: 40%;
     height: 100%;
     padding: 4,5rem 0 0 3rem;
     backdrop-filter: blur(24px);
@@ -236,28 +236,12 @@ svg {
 }
 /* Add blur to header */
 
-.blur-header{
-  background-color : transparent;
-}
-
-.blur-header::after{
-  content: '';
-  position: absolute;
-  width: 1000%;
-  height: 100%;
-  background-color: hsla(0, 0%, 10%, .3);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px); /* for safari */
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
 /* Active link */
 .active-link{
   color: var(--first-color);
 }
 
-/*=============== HOME ===============*/
+/*================================= HOME ===============================*/
 
 .home{
   background-color: var(--container-color);
@@ -325,7 +309,7 @@ svg {
   filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, .2));
 }
 
-/*=============== BUTTON ===============*/
+/*================================ BUTTON ==================================*/
 
 .button{
   display: inline-block;
@@ -340,7 +324,7 @@ svg {
 .button:hover{
   box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, .25);
 }
-/*=============== ABOUT ===============*/
+/*=================================== ABOUT =================================*/
 .about__container{
   row-gap: 2.5rem;
 }
@@ -364,7 +348,7 @@ svg {
 .about__blob path{
   stroke: var(--first-color);
 }
-/*=============== SKILLS ===============*/
+/*================================ SKILLS ==============================*/
 .skills{
   background-color: var(--container-color);
 }
@@ -384,7 +368,9 @@ svg {
 
 .skills__content,
 .skills__group{
-  display: grid;
+  display: block;
+  padding-left: 14px;
+  
 }
 
 .skills__content{
@@ -397,6 +383,7 @@ svg {
 .skills__group{
   row-gap: 1rem;
   list-style: decimal-leading-zero;
+
 }
 
 .skills__item{
@@ -409,7 +396,7 @@ svg {
 }
 
 
-/*=============== PROJECTS ===============*/
+/*============================= PROJECTS =============================*/
 
 .projects{
   background-color: var(--body-color);
@@ -510,7 +497,7 @@ text-align: center;
 } 
 
 
-/*=============== CONTACT ===============*/
+/*============================ CONTACT ==========================*/
 
 .contact{
   background-color: var(--container-color);
@@ -558,7 +545,7 @@ text-align: center;
   font-size: var(--small-font-size);
   color: var(--title-color);
 }
-/*=============== FOOTER ===============*/
+/*============================== FOOTER =============================*/
 
 
 .footer{
@@ -660,11 +647,12 @@ text-align: center;
   .skills__content{
     grid-template-columns: max-content;
     row-gap: 1rem;
+    display: grid;
   }
 
-  .services__card{
-    padding-block: 1.5rem;
-  }
+  .skills__group{
+    display: list-item;
+  } 
 }
 
 /* For medium devices */
@@ -672,7 +660,6 @@ text-align: center;
   .home__container,
   .about__container,
   .skills__container,
-  .services__container,
   .projects__container,
   .contact__container{
     grid-template-columns: 360px;
@@ -682,7 +669,7 @@ text-align: center;
 
 @media screen  and (min-width: 768px){
   .nav__menu{
-    width: 55%;
+    width: 20%;
   }
 
   .home__container,
@@ -712,9 +699,35 @@ text-align: center;
     order: 1;
   }
 
-  .services__container,
   .projects__container{
     grid-template-columns: repeat(2, 352px);
+  }
+
+  .skills__content,
+  .skills__group{
+    display: grid;
+  }
+  .footer{
+    padding-block: 1rem 1rem;
+  }
+
+  .footer__container{
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: initial;
+  }
+
+  .footer__title{
+    font-size: var(--bigger-font-size);
+  }
+
+  .footer__social{
+    column-gap: 1.5rem;
+  }
+
+  .footer__copy{
+    margin: 0;
+    justify-self: flex-end;
   }
 }
 /* For large devices */
@@ -744,12 +757,14 @@ text-align: center;
 
   .nav__menu{
     width: initial;
+    padding-top: .4rem;
   }
 
   .blur-header::after{
     backdrop-filter: blur(25px);
     --webkit-backdrop-filter: blur(25px); /* for safari */
   }
+  
 }
 
 @media screen and (min-width: 1152px){
@@ -805,23 +820,16 @@ text-align: center;
 
   .skills__content{
     column-gap: 8rem;
+    display: grid;
   }
 
   .skills__group{
     row-gap: 1.5rem;
+    display: grid;
   }
 
   .skills__item{
     font-size: var(--h3-font-size);
-  }
-
-  .services__container{
-    grid-template-columns: repeat(3, 352px);
-    padding-block: 2.5rem 4rem;
-  }
-
-  .services__card{
-    padding: 3.5rem 2rem;
   }
 
   .projects__container{
@@ -883,5 +891,6 @@ text-align: center;
   .scrollup{
     right: 3rem;
   }
+  
 
 }
