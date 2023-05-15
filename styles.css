@@ -64,6 +64,7 @@
 }
 
 /*=============== BASE ===============*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -614,7 +615,7 @@ text-align: center;
 }
 /*=============== SCROLL UP ===============*/
 
-.scrollup {
+.scrollup{
   position: fixed;
   right: 1rem;
   bottom: -50%;
@@ -845,7 +846,7 @@ text-align: center;
   .contact__container{
     grid-template-columns: 680px;
     padding-block: 2.5rem 2rem;
-    padding-left: 220px; /*/////////////////////////////////////////////////////////////////////////////////*/
+    padding-left: 220px; 
   }
 
   .contact__form{
@@ -891,6 +892,5 @@ text-align: center;
   .scrollup{
     right: 3rem;
   }
-  
 
 }

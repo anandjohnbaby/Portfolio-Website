@@ -64,7 +64,7 @@ const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
     // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
 	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-						: scrollUp.classList.remove('show-scroll')
+				   : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
@@ -97,10 +97,14 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2500,
     delay: 400,
-})
+});
 
-sr.reveal('.home__data, .home__social, .contact__container, .footer__container')
-sr.reveal('.home__image', {orgin: 'bottom'})
-sr.reveal('.home__data, .skills__data', {origin: 'left'})
-sr.reveal('.home__image, .skills__content', {origin: 'right'})
-sr.reveal('.services__card, .projects__card', {interval: 100})
+sr.reveal('.home__data, .home__social, .contact__container, .footer__container');
+sr.reveal('.home__image', {orgin: 'bottom'});
+sr.reveal('.home__data, .skills__data', {origin: 'left'});
+sr.reveal('.home__image, .skills__content', {origin: 'right'});
+sr.reveal('.services__card, .projects__card', {interval: 100});
+
+
+
+
