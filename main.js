@@ -38,26 +38,7 @@ const scrollHeader = () =>{
 }
 window.addEventListener('scroll', blurHeader)
 
-/*=============== EMAIL JS ===============*/
-/*
-const contactForm = document.getElementById('contact-form'),
-      contactMessage = document.getElementById('contact-message')
 
-const sentEmail = (e) =>{
-    e.preventDefault()
-    emailjs.sentForm('service_cpqinpg', 'template_y89rscl', '#contact-form', 'AQyRX2ilMatnoRPxW')
-        .then(() =>{
-            contactMessage.textContent = 'Message sent successfully'
-            setTimeout(() =>{
-                contactMessage.textContent = ''
-            }, 5000)
-        }, () =>{
-            contactMessage.textContent = 'Message not sent (service error)'
-        })
-}
-
-contactForm.addEventListener('submit', sentEmail)
-*/
 
 function SendMail() {
     var contactMessage = document.getElementById("contactMessage");
